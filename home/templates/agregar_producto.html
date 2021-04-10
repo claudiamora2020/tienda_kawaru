@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block contenido %}
+   <h1>Agregar producto</h1>
+   <form action="" method="POST" enctype="multipart/form-data"> <!--tranfieres archivos desde el formulario hasta la vista-->
+       {% csrf_token %}
+       {{formulario.as_p}}
+
+       <input type="submit" value="Guardar">
+
+   </form>
+{% endblock contenido %}
